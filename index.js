@@ -1,4 +1,4 @@
-console.log('this is collge library website')
+// console.log('this is collge library website')
 
 
 function Book(name, author, type) {
@@ -15,7 +15,7 @@ function Display() {
 
 
 Display.prototype.add = function(book) {
-    console.log('this is our display function')
+    // console.log('this is our display function')
 
     tableBody = document.getElementById('tableBody')
 
@@ -59,7 +59,7 @@ Display.prototype.show = function(type, displaymessage) {
     `
     setTimeout(function() {
         message.innerHTML = "";
-    }, 2000);
+    }, 5000);
 }
 
 // add submit listener to library form
@@ -67,7 +67,7 @@ let libraryform = document.getElementById('libraryForm');
 document.addEventListener('submit', libraryFormSubmit);
 
 function libraryFormSubmit(e) {
-    console.log('you submit the form')
+    // console.log('you submit the form')
     e.preventDefault();
     let name = document.getElementById('bookName').value;
     let author = document.getElementById('author').value;
@@ -88,12 +88,12 @@ function libraryFormSubmit(e) {
 
     let book = new Book(name, author, type)
 
-    console.log(book)
     let display = new Display();
 
 
     if (display.validate(book)) {
 
+        // console.log(book)
         display.add(book);
         display.clear();
         display.show('success', 'your book has been succesfully added')
